@@ -3,22 +3,20 @@ package com.example.accio_shop.dto.response;
 import com.example.accio_shop.enums.Category;
 import com.example.accio_shop.model.Seller;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class ProductResponse {
 
     private String name;
 
     private int price;
 
-    Category category;
+    private Category category;
 
-    SellerResponse seller;
+    private SellerResponse seller;
 }

@@ -35,7 +35,7 @@ public class Seller {
 //    @Max(value = 5)
 //    private int rating;
 
-    @OneToMany(mappedBy = "seller")
+    @OneToMany(mappedBy = "seller", cascade = CascadeType.ALL)
     @JsonIgnore
     List<Product> products = new ArrayList<>();
 }
